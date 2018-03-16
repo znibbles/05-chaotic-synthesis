@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 287.0, 602.0, 1212.0, 648.0 ],
+		"rect" : [ 51.0, 102.0, 840.0, 648.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,6 @@
 					"outlettype" : [ "", "float" ],
 					"parameter_enable" : 1,
 					"patching_rect" : [ 21.5, 13.5, 44.0, 47.0 ],
-					"presentation_rect" : [ 20.5, 11.5, 0.0, 0.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "pitch",
@@ -130,7 +129,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 712.0, 728.0, 600.0, 450.0 ],
+						"rect" : [ 344.0, 182.0, 600.0, 450.0 ],
 						"editing_bgcolor" : [ 0.9, 0.9, 0.9, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
