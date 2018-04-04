@@ -21,3 +21,10 @@ Not really much is happening here. Now let's put away politeness and drive this 
 Then even more so, followed by an intermittent section of periodicity again, then again superseded by chaos.
 
 So with a very simple setup, we have a very rich set of timbres at hand to play around with.
+
+## Shameless plug
+
+I've written a Max4Live device that does exactly this:
+
+[![PRRPLEXOR image](https://s3.eu-central-1.amazonaws.com/julianrubisch-website/images/software/prrplexor.png)](http://maxforlive.com/library/device/3613/prrplexor)
+
