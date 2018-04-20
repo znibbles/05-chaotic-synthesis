@@ -1,2 +1,23 @@
 ##
 
+One other way to abuse FM synthesis is to take a rather exotic modulator function. In this example we will take a _hyperbolic sine_ and see what comes out.
+
+Hyperbolic functions, in contrast to trigonometric functions, are defined on a hyperbola rather than on a circle. The hyperbolic sine, in particular, is a function that quickly approaches (negative) infinity for both positive and negative arguments. It's not periodic, at least not in the real domain.
+
+##
+
+So what if we take a normal FM and exchange the sine modulator for a hyperbolic sine? Let's find out.
+
+Let's look at how those functions look plotted, first. We'll first take a simple phasor and plot that. I've adjusted the buffer size of the scope so we can see two periods. Next we take a cycle object and see the well-known cosine coming out of the second outlet. Okay, just for demonstration purposes, I'll scale the phasor up to a range from -5 to 5, and pipe that into a sinh. And that's what it looks like. Actually it's approaching positive and negative infinity here, but naturally in a computer that's clipped somewhere.
+
+##
+
+Now what would happen if we used this hyperbolic sine to modulate a cosine oscillator? We'll try that out scaling from 100 to 200 here, and using that as a cycle's frequency. Okay, rather than the soft vibrato we'd get from another cosine oscillator modulating it, we get a rather fierce sweep. 
+
+Alright, but where is the indeterminacy? Let's another parameters to this. First, we can make the modulation frequency adjustable from outside. Secondly, the same for the modulation amplitude. We do that by simply replacing the scale operation with a multiplication and adding another inlet.
+
+Now we're getting that interesting FM sound.
+
+But there's another distinction we can make: Because we're multiplying by positive values, we're taking only the positive half wave of the sinh. We could, however, optionally scale the phasor's output from -1 to 1 so we also get the negative half wave. Let's try that out too.
+
+Last, we can add the typical FM carrier frequency parameter.
