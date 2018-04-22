@@ -18,7 +18,7 @@ Alright, but where is the indeterminacy? Let's another few parameters to this. F
 
 Now we're getting that interesting FM sound.
 
-But there's another distinction we can make: Because we're multiplying the `[phasor]`'s output by positive values, we're taking only the positive half wave of the `[sinh]`. We could, however, optionally scale the `[phasor]`'s output from -1 to 1 so we also get the negative half wave. Let's try that out too.
+But there's another distinction we can make: Because we're multiplying the `[phasor]`'s output by positive values, we're taking only the positive half wave of the `[sinh]`. We can see that in the spectrum, too, because we have a DC offset here which we'd have to remove. We could, however, optionally scale the `[phasor]`'s output from -1 to 1 so we also get the negative half wave. Let's try that out too.
 
 Last, we can add the typical FM carrier frequency parameter.
 
