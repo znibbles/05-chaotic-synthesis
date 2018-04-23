@@ -12,9 +12,9 @@ Let's look at how those functions look plotted, first. We'll first take a simple
 
 ## Adding a Chaotic Touch
 
-Now what would happen if we used this hyperbolic sine to modulate a cosine oscillator? We'll try that out scaling from 100 to 200 here, and using that as a `[cycle]`'s frequency. Okay, rather than the soft vibrato we'd get from another cosine oscillator modulating it, we get a rather fierce sweep. 
+Now what would happen if we used this hyperbolic sine to modulate a cosine oscillator? We'll try that out scaling from 100 to 1000 here, and using that as a `[cycle]`'s frequency. Okay, rather than the soft vibrato we'd get from another cosine oscillator modulating it, we get a rather fierce sweep. 
 
-Alright, but where is the indeterminacy? Let's another few parameters to this. First, we can make the modulation frequency adjustable from outside. Secondly, the same for the modulation amplitude. We do that by simply replacing the `[scale]` operation with a multiplication and adding another inlet.
+Alright, but where is the indeterminacy? Let's another few parameters to this. First, we can make the modulation frequency adjustable from outside. Secondly, the same for the modulation amplitude. We do that by simply adding a multiplication after the `[phasor]` and adding another inlet.
 
 Now we're getting that interesting FM sound.
 
