@@ -38,6 +38,60 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 13.0,
+					"id" : "obj-11",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 490.0, 297.0, 219.0, 23.0 ],
+					"style" : "",
+					"text" : "pfft~ gizmo_loadme 4096 4"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-12",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 148.0, 352.0, 37.0, 22.0 ],
+					"style" : "",
+					"text" : "clear"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 18.0, 10.0, 67.0, 22.0 ],
+					"style" : "",
+					"text" : "2, 4 20000"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 18.0, 42.0, 43.0, 22.0 ],
+					"style" : "",
+					"text" : "line 0."
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-45",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -59,32 +113,6 @@
 					"patching_rect" : [ 429.0, 482.0, 48.0, 22.0 ],
 					"style" : "",
 					"text" : "round~"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-43",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 492.0, 355.0, 65.0, 22.0 ],
-					"style" : "",
-					"text" : "cycle~ 0.3"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-42",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 565.0, 407.0, 72.0, 22.0 ],
-					"style" : "",
-					"text" : "cycle~ 0.33"
 				}
 
 			}
@@ -112,7 +140,7 @@
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 565.0, 452.0, 121.0, 23.0 ],
 					"style" : "",
-					"text" : "scale~ 0. 1. 320. 0."
+					"text" : "scale~ 0. 1. 640. 0."
 				}
 
 			}
@@ -127,7 +155,7 @@
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 429.0, 452.0, 121.0, 23.0 ],
 					"style" : "",
-					"text" : "scale~ 0. 4. 0. 320."
+					"text" : "scale~ 2. 4. 0. 640."
 				}
 
 			}
@@ -169,7 +197,7 @@
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 57.0, 401.0, 188.0, 23.0 ],
 					"style" : "",
-					"text" : "jit.matrix poked 1 char 320 320"
+					"text" : "jit.matrix poked 1 char 640 640"
 				}
 
 			}
@@ -586,6 +614,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"source" : [ "obj-12", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"source" : [ "obj-13", 0 ]
 				}
@@ -600,9 +635,34 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"order" : 1,
+					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
 					"midpoints" : [ 176.5, 55.5, 176.5, 55.5 ],
+					"order" : 0,
 					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"order" : 2,
+					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"midpoints" : [ 27.5, 75.0, 87.0, 75.0, 87.0, 36.0, 109.5, 36.0 ],
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}
@@ -712,6 +772,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-39", 0 ],
 					"source" : [ "obj-8", 0 ]
 				}
@@ -726,11 +793,36 @@
 			}
  ],
 		"dependency_cache" : [ 			{
+				"name" : "gizmo_loadme.maxpat",
+				"bootpath" : "C74:/help/msp",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "spectrumdraw~.mxo",
 				"type" : "iLaX"
 			}
  ],
-		"autosave" : 0
+		"autosave" : 0,
+		"styles" : [ 			{
+				"name" : "AudioStatus_Menu",
+				"default" : 				{
+					"bgfillcolor" : 					{
+						"type" : "color",
+						"color" : [ 0.294118, 0.313726, 0.337255, 1 ],
+						"color1" : [ 0.454902, 0.462745, 0.482353, 0.0 ],
+						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+						"angle" : 270.0,
+						"proportion" : 0.39,
+						"autogradient" : 0
+					}
+
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+ ]
 	}
 
 }
